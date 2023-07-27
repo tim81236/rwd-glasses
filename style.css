@@ -106,7 +106,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 768px) {
     .banner {
         height: 394px;
-        background-image: url(img/bannersmall.png);
+        background-image: url(https://raw.githubusercontent.com/tim81236/rwd-glasses/main/img/bannersmall.png);
     }
     .header-title h1 {
         font-size: 1rem;
