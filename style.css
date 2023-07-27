@@ -48,7 +48,7 @@ h1, h2, h3, h4, h5, h6 {
 .nav {
     height: 108px;
     background-color: #aa0601;
-    padding: 0 88px;
+    padding: 0 5.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -66,7 +66,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .menu li {
-    padding-right: 64px;
+    padding-left: 64px;
     font-size: 20px;
 }
 
@@ -235,6 +235,10 @@ h1, h2, h3, h4, h5, h6 {
     color: #AA0601;
 }
 
+.product-left, .product-right {
+    width: 100%;
+}
+
 
 @media (max-width: 768px) {
     .product-right {
@@ -267,8 +271,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .design {
-    height: 2162px;
     background-image: url(img/bg.png);
+    padding-bottom: 479px;
 }
 
 .h3-white {
@@ -287,8 +291,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .designGallery {
-    margin-right: -170px;
-    margin-left: -170px;
+    
+    /* margin-right: -10.625rem;
+    margin-left: -10.625rem; */
     margin-bottom: 3.75em;
 }
 
@@ -361,24 +366,38 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .doubleA {
-    width: 585px;
-    height: 592px;
-    background-image: url(img/product-8.png);
+    margin-right: 1.875rem;
+    position: relative;
+}
+
+.youth {
+    position: relative;
+}
+
+.doubleA::before, .youth::before {
+    position: absolute;
+    content: '';
+    background-color: rgba(255, 255, 255, 0.5);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.doubleA p, .youth p {
+    position: absolute;
+    content: '';
     font-family: 'roboto';
     font-weight: bold;
     font-size: 72px;
     color: #AA0601;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
 }
 
-.youth {
-    width: 585px;
-    height: 592px;
-    background-image: url(img/product-9.png);
-    font-family: 'roboto';
-    font-weight: bold;
-    font-size: 72px;
-    color: #AA0601;  
-}
+
 
 @media (max-width: 768px) {
     .h3-white {
@@ -461,7 +480,7 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .youth {
-        width: 100%;
+        max-width: 100%;
         height: 284px;
         background-image: url(img/product-9.png);
         font-size: 2rem;
@@ -479,7 +498,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .recommendCard {
-    width: 282px;
+    width: 25%;
+}
+
+.recommendCard:nth-child(-n+3) {
+    margin-right: 1.5rem;
 }
 
 .card-img-top {
@@ -488,6 +511,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .card-body {
     border: 1px solid #DEE2E6;
+    background-color: #fff;
     padding: 1rem;
 }
 
@@ -749,6 +773,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* 設定值 */
+.w-100 {
+    max-width: 100%; 
+}
+
 .h-100 {
     height: 100%;
 }
