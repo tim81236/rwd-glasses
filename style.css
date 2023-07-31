@@ -64,6 +64,10 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
 }
 
+.hamburger {
+    display: none;
+}
+
 .menu {
     display: flex;
     justify-content: flex-end;
@@ -79,6 +83,10 @@ h1, h2, h3, h4, h5, h6 {
     padding-left: 64px;
     font-size: 20px;
 }
+.menu a:hover {
+    border-bottom: 4px solid #fff;
+}
+
 
 @media (max-width: 768px) {
     .nav {
@@ -96,15 +104,46 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 414px) {
     .nav {
+        position: relative;
         height: 50px;
+        /* flex-direction: column; */
+        padding: 0 0;
+        
+    }
+    .hamburger {
+        display: block;
+        position: absolute;
+        content: '';
+        left: 1rem;
+        /* top: 12px; */
     }
     .logo {
         width: 48px;
         margin: 0 auto;
     }
     .menu {
+        position: absolute;
         display: none;
+        top: 100%;
+        width: 100%;
+        flex-direction: column;
+    }
+    .menu li {
+        width: 100%;
+        padding-left: 0px;
+        border: 1px solid #fff;
+        background-color: #AA0601;
     }  
+    .menu li a{
+        display: block;
+        padding: 1rem 0;
+        text-align: center;
+    }
+    .menu li a:hover{
+        background-color: #650300;
+    }
+
+
 }
 
 
@@ -130,7 +169,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 768px) {
     .banner {
         height: 840px;
-        background-image: url(https://raw.githubusercontent.com/tim81236/rwd-glasses/main/img/bannersmall.png);
+        background-image: url(img/banner-sm.png);
     }
     .header-title h1 {
         font-size: 1.25rem;
@@ -144,7 +183,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 414px) {
     .banner {
         height: 394px;
-        background-image: url(https://raw.githubusercontent.com/tim81236/rwd-glasses/main/img/bannersmall.png);
+        background-image: url(img/banner-sm.png);
     }
     .header-title h1 {
         font-size: 1rem;
@@ -564,7 +603,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .design {
-        height: 1096px;
+        padding-bottom: 417px;
     }
     .designGallery {
         margin-right: 0px;
@@ -648,7 +687,8 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .design {
-        height: 1096px;
+        padding-bottom: 189px;
+        /* height: 1096px; */
     }
     .designGallery {
         margin-right: 0px;
@@ -774,7 +814,7 @@ h1, h2, h3, h4, h5, h6 {
         margin-bottom: 2rem;
     }
     .recommend {
-        margin-top: -17rem;
+        margin-top: -22rem;
         margin-bottom: 1.5rem;
     }
     .recommendList {
@@ -797,7 +837,7 @@ h1, h2, h3, h4, h5, h6 {
         margin-bottom: 1rem;
     }
     .recommend {
-        margin-top: -10.3rem;
+        margin-top: -9.3rem;
         margin-bottom: 1.5rem;
     }
     .recommendList {
@@ -856,6 +896,9 @@ h1, h2, h3, h4, h5, h6 {
     color: #fff;
     background-color: #AA0601;
     border: 0;
+}
+.submit:hover{
+    background-color: #650300;
 }
 
 @media (max-width: 768px) {
