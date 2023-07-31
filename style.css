@@ -101,9 +101,6 @@ h1, h2, h3, h4, h5, h6 {
         padding-left: 40px;
         font-size: 20px;
     }
-    .menu a:hover {
-    border-bottom: 0px;
-
 }
 @media (max-width: 414px) {
     .nav {
@@ -144,9 +141,9 @@ h1, h2, h3, h4, h5, h6 {
     }
     .menu li a:hover{
         background-color: #650300;
+        border-bottom: none;
     }
-    .menu a:hover {
-    border-bottom: 0px;
+
 
 }
 
